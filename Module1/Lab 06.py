@@ -1,7 +1,7 @@
 
 import math
 
-salary = 20000
+salary = float(input("Enter your salary (£): "))
 
 def getIncomeTax(salary):
     taxper = 0
@@ -13,8 +13,9 @@ def getIncomeTax(salary):
     elif salary > 150000:
         taxper = 45
 
-    tax = (salary / 100) * taxper
+    print("Income tax (%): " + str(taxper))
+    tax = round((salary / 100) * taxper, 2)
 
     return tax
 
-print(getIncomeTax(salary))
+print("Total income tax (£): £" +  str(getIncomeTax(salary)))

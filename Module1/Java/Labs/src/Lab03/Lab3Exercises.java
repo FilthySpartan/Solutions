@@ -25,8 +25,7 @@ public class Lab3Exercises {
 	}
 	
 	public  void convertInputToStonesPounds(int pounds) {
-//		System.out.println("Enter total weight in pounds: ");
-//		Scanner s = new Scanner(System.in);
+
 		int stones = pounds / 14;
 		int remainingPounds = pounds % 14;
 		System.out.println(stones + " stones and " + remainingPounds + " pounds");

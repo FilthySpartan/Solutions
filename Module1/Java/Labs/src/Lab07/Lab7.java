@@ -3,7 +3,7 @@ package Lab07;
 public class Lab7 {
     
     public void start() {
-        int[] numbers = { 1, 3, 5, 7, 0, 4, 6, 8 };
+        int[] numbers = { 1, -3, 5, 7, 0, 4, 6, 8 };
         System.out.println("sum of numbers = " + sum(numbers));
         System.out.println("average value = " + average(numbers));
         System.out.println("lowest = " + minimum(numbers));

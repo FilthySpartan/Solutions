@@ -6,8 +6,10 @@ public class Lab5 {
 
 	public  int getInt(String prompt) {
 		System.out.println(prompt);
-		Scanner s = new Scanner(System.in);			
-		return s.nextInt();
+		Scanner s = new Scanner(System.in);	
+		int result = s.nextInt();
+		s.close();	
+		return result;
 
 	}
 	

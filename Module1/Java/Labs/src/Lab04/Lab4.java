@@ -1,5 +1,5 @@
 package Lab04;
-import java.io.InputStream;
+
 import java.util.Scanner;
 
 public class Lab4 {

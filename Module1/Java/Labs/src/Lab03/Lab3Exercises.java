@@ -6,15 +6,20 @@ public class Lab3Exercises {
 
 	public  int getInt(String prompt) {
 		System.out.println(prompt);
-		Scanner s = new Scanner(System.in);			
-		return s.nextInt();
+		Scanner s = new Scanner(System.in);	
+		int result = s.nextInt();
+		s.close();	
+		return result;
 
 	}
 	
 	public  String getString(String prompt) {
 		System.out.println(prompt);
 		Scanner s = new Scanner(System.in);		
-		return s.nextLine();
+		String result = s.nextLine();
+		s.close();	
+		return result;
+		
 				
 	}
 	

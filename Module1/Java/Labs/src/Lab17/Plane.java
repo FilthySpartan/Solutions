@@ -20,7 +20,7 @@ public class Plane extends Token {
 
     public void land() {
         this.altitude = 0;
-        System.out.println("Plane has landed safely");
+        System.out.println(this.name + " has landed safely");
     }
 
 }

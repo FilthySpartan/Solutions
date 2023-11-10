@@ -20,7 +20,7 @@ public class Submarine extends Token{
 
     public void surface() {
         this.depth = 0;
-        System.out.println("Submarine has breached the surface");
+        System.out.println(this.name + " has breached the surface");
     }
 
 }

@@ -3,10 +3,12 @@ package Lab17;
 public class Map {
     int xSize;
     int ySize;
+    String[][] layout;
 
-    public Map(int xSize, int ySize) {
+    public Map(int xSize, int ySize, String[][] layout) {
         this.xSize = xSize;
         this.ySize = ySize;
+        this.layout = layout;
     }
 
     public void drawMap(Token[] tokens) {
@@ -32,5 +34,10 @@ public class Map {
 
     public int getySize() {
         return this.ySize;
+    }
+
+    public String[][] getLayout() {
+
+        return layout;
     }
 }

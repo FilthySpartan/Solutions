@@ -1,11 +1,14 @@
-package Lab09;
+package Lab17;
 
 public class Token {
+    String name;
     int x;
     int y;
     Map map;
+    
 
-    public Token(int x, int y, Map map) {
+    public Token(String name, int x, int y, Map map) {
+        this.name = name;
         this.x = x;
         this.y = y;
         this.map = map;
@@ -23,27 +26,35 @@ public class Token {
 
         if (dir.equals("north") || dir.equals("n")) {
             if (map.getySize() > (this.getY() + dis)){
-                this.setY(this.y + dis);
+                this.setY(this.getY() + dis);
                 onBoard = true;
             } 
         } else if (dir.equals("south") || dir.equals("s")) {
-            if (map.getySize() < (this.getY() - dis)){
-                this.setY(this.y - dis); 
+            if (0 < (this.getY() - dis)){
+                this.setY(this.getY() - dis); 
                 onBoard = true;
             }
         } else if (dir.equals("west") || dir.equals("w")) {
-            if (map.getxSize() > (this.getX() - dis)){
-                this.setX(this.x - dis);  
+            if (0 < (this.getX() - dis)){
+                this.setX(this.getX() - dis);  
                 onBoard = true;
             }
         } else if (dir.equals("east") || dir.equals("e")) {
-            if (map.getxSize() < (this.getX() + dis)) {             
-                this.setX(this.x + dis);this.x += dis; 
+            if (map.getxSize() > (this.getX() + dis)) {             
+                this.setX(this.getX() + dis); 
                 onBoard = true;
             }
         }
 
         return onBoard;
+    }
+
+    public void printDetails() {
+        System.out.println(this.name + " Xpos: " + this.getX() + ", Ypos: " + this.getY());
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public int getX(){

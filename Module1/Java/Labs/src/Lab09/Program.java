@@ -5,7 +5,7 @@ public class Program {
     
     public static void main(String[] args) {
         Random rand = new Random();
-        Map map = new Map(15, 15);
+        Map map = new Map(20, 20);
         Token t1 = new Token(5, 3, map);
         // Token t2 = new Token(30, 70, map);
         // Token t3 = new Token(250, 200, map);
@@ -30,13 +30,12 @@ public class Program {
                 System.out.println(tokens[i] + " xPos: " + tokens[i].getX());
                 System.out.println(tokens[i] + " yPos: " + tokens[i].getY());
 
-                if(tokens[i].move(moveDir, dis) == false) tokens[i] = null;
+                if(tokens[i].move(moveDir, dis) == false){
+                     tokens[i] = null;
+                    System.out.println("Token has fallen off the board");
+                }
 
                 map.drawMap(tokens);
-
-                if(tokens[i] == null) {
-                    break;
-                }
             }
         }
     }

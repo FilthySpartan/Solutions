@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book a Course</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="QA Corporate Logo">
+        <h1 style="background-image:url(images/trainer.jpg); padding: 4em 1em; color: white; background-size: cover">Course Registration</h1> 
+    </header>
+    <form>
+    <!-- insert form here -->
+    <fieldset>
+       <legend>Your Details</legend> 
+        <ul> 
+            <li>
+            <label> 
+                First Name
+            </label>
+            <input type="text" id="firstName" autofocus>
+            </li> 
+            <li>
+            <label> 
+                Surname
+            </label>
+            <input type="text" id="surname">
+            </li>
+            <li>
+            <label> 
+                Position / Role
+            </label>
+            <input type="text" id="position">
+            </li>
+            <li>
+            <label>
+                Email
+            </label>
+            <input type="email" id="email" placeholder="you@domain.com">
+            </li>
+            <li>
+                <label>
+                    Telephone
+                </label>
+                <input type="text" id="telephone" placeholder="E.g. +44750000000" mandatory>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>Course Details</legend>
+        <ul>
+            <li>
+                <select> 
+                    <option>Programming with JavaScript</option>
+                    <option>Developing Web Applications using HTML5</option>
+                    <option>Developing Responsive Websites</option>
+                    <option>Leveraging the Power of jQuery</option>
+                </select>
+            </li>
+            <li><label>Number of Delegates</label>
+            <input type="text" > 
+            </li>
+            <li><label>Start Date</label>
+                <input type="date" id="startDate"> 
+            </li>
+   
+        </ul>
+    </fieldset>
+    <fieldset>
+        <button type="submit">Submit</button>
+    </fieldset>
+</form>
+
+</body>
+</html>
